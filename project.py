@@ -5,8 +5,9 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
-from openpyxl import Workbook, load_workbook
 
+from openpyxl import Workbook, load_workbook
+from datetime import datetime
 
 service = Service()
 option = webdriver.ChromeOptions()
@@ -104,3 +105,29 @@ elif main_izvēle.lower() == "b":
     info_box_4=driver.find_element(By.ID, "mntl-nutrition-facts-summary_1-0")
     info_4=info_box_4.text
     print("\n", info_4)
+elif main_izvēle.lower() == "c":
+    # Kaloriju trekeris
+    wb = load_workbook("Apestas_kalorijas.xlsx")
+    ws = wb.active
+    max_row = ws.max_row
+
+    sodienas_datums = datetime.now().strftime("%d/%m/%y")
+    print("Sveiki, cik jūs šodien apēdāt kaloriju?")
+    apestas_kalorijas = input()
+
+    # Iečekojam, vai šodien jau ir veikts ieraksts
+    already_exists = False
+    for i in range(2, max_row + 1):
+        if ws.cell(row=i, column=1).value == sodienas_datums:
+            already_exists = True
+            break
+
+    if not already_exists:
+        ws.cell(row=max_row + 1, column=1, value=sodienas_datums)
+        ws.cell(row=max_row + 1, column=2, value=apestas_kalorijas)
+        print("Dati veiksmīgi pievienoti!")
+    else:
+        print("Šodienas dati jau ir pievienoti.")
+
+    wb.save("Apestas_kalorijas.xlsx")
+    wb.close()
