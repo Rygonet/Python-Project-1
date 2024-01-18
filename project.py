@@ -1,4 +1,3 @@
-import pandas
 import selenium
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -14,7 +13,7 @@ option = webdriver.ChromeOptions()
 option.add_argument("-headless")
 driver = webdriver.Chrome(service=service, options=option)
 
-print("Sveiki, kādu funkciju Jūs vēlaties tagad izmantot? Ievadiet burtu. \n a) Kaloriju kalkulators \n b) Jaunas receptes meklēšana \n c) Šodien apēsto kaloriju piefiksēšana")
+print("Sveiki, kādu funkciju Jūs vēlaties tagad izmantot? Ievadiet burtu. \n a) Kaloriju kalkulators \n b) Jaunas receptes meklēšana \n c) Šodien apēsto kaloriju piefiksēšana Excel failā")
 main_izvēle=input()
 if main_izvēle.lower() == "a":
     #Cik šodien kaloriju jāapēd?
@@ -49,7 +48,7 @@ if main_izvēle.lower() == "a":
 elif main_izvēle.lower() == "b":
     #Ēdiena recepšu meklēšana
 
-    print("Kādus ingredientus Jūs vēlaties savā receptē? \n (rakstiet ar mazajiem burtiem angļu valodā ar atstarpēm starp katru ingredientu) \n (Piemērs: beef potatoes garlic)")
+    print("Kādus ingredientus Jūs vēlaties redzēt savā receptē? \n (rakstiet ar mazajiem burtiem angļu valodā ar atstarpēm starp katru ingredientu) \n (Piemērs: beef potatoes garlic)")
     ingredienti=input()
 
     url = "https://www.allrecipes.com"
@@ -67,7 +66,7 @@ elif main_izvēle.lower() == "b":
     find.send_keys(Keys.RETURN)
     time.sleep(3)
 
-    print("\n Izvēlaties numuru no saraksta, lai redzētu izvēlētās receptes uzturvērtību:")
+    print("\n Izvēlaties numuru no saraksta, lai redzētu informāciju par izvēlēto recepti:")
     receptes = driver.find_elements(By.CLASS_NAME, "card__title")
     #print(receptes)
 
@@ -131,3 +130,5 @@ elif main_izvēle.lower() == "c":
 
     wb.save("Apestas_kalorijas.xlsx")
     wb.close()
+else:
+    print("Kļūda, jūs neievadījāt vienu no 3 piedāvātajiem burtiem.")
