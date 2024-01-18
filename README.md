@@ -4,6 +4,7 @@ Dotā projekta mērķis ir automatizēt kādu no ikdienas uzdevumiem. Es esmu ku
 1. kaloriju daudzuma aprēķināšanu, cik man jāapēd dienā lai uzturētu savu svaru;
 2. jaunu recepšu meklēšanu;
 3. apēsto kaloriju piefiksēšanu Excel failā.
+
 Šī projekta kodu es varēšu lietot vairākas reizes dienā, jo galvenā pamatideja ir tāda: Es pamostos no rīta, nosveros, un ar 1. funkcijas palīdzību nosaku cik man šodien ir jāapēd kaloriju, lai saglabātu savu tagadējo svaru. Lai uzņemtos svarā man tajā dienā ir vienkārši jāapēd vairāk nekā izdot kods. Tā kā vakarā es parasti sagatavoju maltīti visai nākamajai dienai (parasti sanāk 6-8 porcijas), ar 2. funkcijas palīdzību es varēšu ne tikai izvēlēties ko es gatavošu, bet arī uzzināt visas nianses par iedomāto maltīti. No 2. funkcijas es dabūšu pilnu ingredientu sarakstu, recepti un uzturvērtības, ko es varēšu pārkopēt no termināla uz telefonu, lai varētu pa dienu iepirkties un vakarā no telefona lasot, gatavot. Noslēdzot dienu, pirms gulēt iešanas es varēšu saglabāt pa dienu piefiksēto apēsto kaloriju skaitu excel failā, lai man būtu vieglāk izsekot savu progresu vai noteikt nepilnības, ja tādas radīsies.
 
 
@@ -15,6 +16,7 @@ Izmantotās bibliotēkas:
 
 
 Izmantotās metodes:
+
 Tiek izmantotas 3 metodes. Izvēloties tās, lietotājs norāda galvenajā programmā "a", "b" vai "c" burtus. Tas tika sasniegts izmantojot if, elif un else blokus. Pēdējais else bloks izmet ķļūdu, ja netika pareizi ievadīts viens no trim burtiem.
 
 Kaloriju kalkulatora, jeb "a" metode:
