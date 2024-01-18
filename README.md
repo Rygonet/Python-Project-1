@@ -21,8 +21,11 @@ Izmantotās metodes:
 Tiek izmantotas 3 metodes. Izvēloties tās, lietotājs norāda galvenajā programmā "a", "b" vai "c" burtus. Tas tika sasniegts izmantojot if, elif un else blokus. Pēdējais else bloks izmet ķļūdu, ja netika pareizi ievadīts viens no trim burtiem.
 
 Kaloriju kalkulatora, jeb "a" metode:
+
 Šī metode tiek izmantota, lai aprēķinātu cik kalorijas lietotājam ir jāapēd dienā, pamatojoties uz ievadītajiem dzimuma, vecuma, auguma un svara datiem.
-Metode izmanto matemātiskus aprēķinus, lai noteiktu Basal Metabolic Rate (BMR), un tad ar ievadītajiem fiziskās aktivitātes līmeņu datiem, aprēķinātu Active Metabolic Rate (AMR), jeb kaloriju skaitu, cik ir jāapēd dienā, lai saglabātu savu tagadēju svaru. Formulas ņemtas no vietnes "https://www.verywellfit.com/how-many-calories-do-i-need-each-day-2506873"
+
+Metode izmanto matemātiskus aprēķinus, lai noteiktu Basal Metabolic Rate (BMR), un tad ar ievadītajiem fiziskās aktivitātes līmeņu datiem, aprēķinātu Active Metabolic Rate (AMR), jeb kaloriju skaitu, cik ir jāapēd dienā, lai saglabātu savu tagadēju svaru.
+Formulas ņemtas no vietnes "https://www.verywellfit.com/how-many-calories-do-i-need-each-day-2506873"
 
 Recepšu meklēšanas, jeb "b" metode:
 Šī metode tiek izmantota, lai meklētu jaunas receptes, pamatojoties uz ievadītajiem produktiem.
